@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Resumes</title>
 </head>
 <body>
 
     <header>
-  <a href = "#main content">Skip to Main Content</a>
-        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+  <a href = "#main-content" class= "skip">Skip to Main Content</a>
+        <img src="images/um.png" alt="UM Logo">
         <nav>
             <ul>
                 <li><a href = "index.html">Home</a></li>
-                <li><a href = "resume.html">Resumes</a></li>
+                <li><a href="resume.html" class="active" >Resume</a></li>
                 <li><a href = "networking.html">Networking</a></li>
                 <li><a href = "job_search.html">Job Search</a></li>
             </ul>
@@ -21,9 +23,10 @@
         <h1>Resume Support</h1>
 
     </header>
-<main id="main content">
-  
-  <section>
+
+    <main id="main-content">
+<img src="images/resume.jpg" alt="A girl stands reading her resume.">
+      <section>
     <h2>Craft a Resume that Tells Your Story</h2>
     <p>
       Your resume is often your first impression—an opportunity to highlight your unique strengths, skills, and experiences to potential employers. Whether you’re starting from scratch or looking to polish an existing resume, these resources are here to help you every step of the way.
@@ -37,7 +40,6 @@
   </section>
   
   <section>
-    <img src="images/resume.jpg" alt="A girl stands reading her resume.">
     <h2>Resume Writing Made Easy: Steps to Success</h2>
     <ol>
       <li><strong>Download a UMSI-Approved Template:</strong> Start with a format that works—no need to design from scratch.</li>
@@ -49,7 +51,7 @@
   </section>
 
   <section>
-    <h2>Resume Resources</h2>
+    <h2>Resume & Cover Letter Resources</h2>
     <ul>
       <li>
         <a href="https://docs.google.com/document/d/1_1GfDJyVGIgE82MZjVhuWT_aB_2Hcj1NN62FUCXoR_o/edit?tab=t.0" target="_blank">
@@ -75,6 +77,18 @@
         </a> <br>
         Attend a Resume Refresh workshop, review video tutorials, or access additional templates.
       </li>
+      <li><a href="https://docs.google.com/document/d/15kYeycV4isGpNFI6DWnjqTkp5JnMyitKJ1Wc8kIH-eA/edit?tab=t.0" target="_blank">
+          UMSI Cover Letter Guide and Rubric
+        </a> <br>
+        Comprehensive UMSI guide including tips, formatting rules, and sample accomplishments.</li>
+            <li><a href="https://docs.google.com/document/d/1WJrgSiwXGxGLN_mXBrRUdQy3Lijo68DFwYriGGALGjc/edit?tab=t.0" target="_blank">
+          UMSI Cover Letter Rubric
+        </a> <br>
+        Evaluate your cover letter using the same criteria as UMSI’s Career Development Office.</li>
+            <li><a href="https://docs.google.com/document/d/1C-rxX5VcjVH7YjMdHil1VMo9ZdSOHmausOcX61dld-g/edit?tab=t.0#heading=h.jz6pa8m06clo" target="_blank">
+          AI Prompt Resource Guide: Cover Letters
+        </a> <br>
+        Using AI to Support Your Career Development:Prompt Resource Guide.</li>
     </ul>
     <p>
       Ready for review? <a href="https://umich.instructure.com/courses/137916/pages/talk-to-a-career-coach" target="_blank">Book a resume review appointment with a CDO Career Coach</a>.
@@ -104,33 +118,20 @@
   </section>
           <!-- Content taken & modified from UMGPT with the prompt, "for the same content write me some intro content and resources for a resume page" - this was after I had asked for content for the home page.
         UMGPT. (2025). UMGPT (GPT-4.1 August 25th version) [Large language model]. -->
-
-  <section>
-      <h2>Cover Letter Resources</h2>
-      <div>
-        <img src="images/cover letter.jpg" alt="A student smiles during a portrait photo session with professional lighting.">
-        <ul>
-            <li><a href="https://docs.google.com/document/d/15kYeycV4isGpNFI6DWnjqTkp5JnMyitKJ1Wc8kIH-eA/edit?tab=t.0" target="_blank">
-          UMSI Cover Letter Guide and Rubric
-        </a> <br>
-        Comprehensive UMSI guide including tips, formatting rules, and sample accomplishments.</li>
-            <li><a href="https://docs.google.com/document/d/1WJrgSiwXGxGLN_mXBrRUdQy3Lijo68DFwYriGGALGjc/edit?tab=t.0" target="_blank">
-          UMSI Cover Letter Rubric
-        </a> <br>
-        Evaluate your cover letter using the same criteria as UMSI’s Career Development Office.</li>
-            <li><a href="https://docs.google.com/document/d/1C-rxX5VcjVH7YjMdHil1VMo9ZdSOHmausOcX61dld-g/edit?tab=t.0#heading=h.jz6pa8m06clo" target="_blank">
-          AI Prompt Resource Guide: Cover Letters
-        </a> <br>
-        Using AI to Support Your Career Development:Prompt Resource Guide.</li>
-        </ul>
-      </div>
-    </section>
-
-    </main>
-    <footer>
-        <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
-        </footer>
-    
+  </main>
+  <footer>
+    <form>
+    <fieldset>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required>
+      <input type="submit" value="Subscribe">
+    </fieldset>
+  </form>
+    <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p><br/>
+    <p>© Copyrights <span id="year"></span> by Yuyang Ding. All rights reserved.</p>
+  </footer>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
 </body>
-
 </html>

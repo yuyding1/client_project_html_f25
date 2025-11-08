@@ -3,37 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Networking</title>
 </head>
 <body>
 
     <header>
-  <a href = "#main content">Skip to Main Content</a>
-        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+  <a href = "#main-content" class= "skip">Skip to Main Content</a>
+        <img src="images/um.png" alt="UM Logo">
         <nav>
             <ul>
                 <li><a href = "index.html">Home</a></li>
-                <li><a href = "resume.html">Resumes</a></li>
-                <li><a href = "networking.html">Networking</a></li>
+                <li><a href = "resume.html">Resume</a></li>
+                <li><a href="networking.html" class="active" >Networking</a></li>
                 <li><a href = "job_search.html">Job Search</a></li>
             </ul>
         </nav>
         <h1>Networking & Connections</h1>
 
     </header>
-<main id="main content">
-  
-  <section>
+
+    <main id="main-content">
+  <img src="images/networking.jpg" alt="Three people network and share conversations at a career fair event.">
+  <section class="networking">
     <h2>How can Networking help me achieve my career goals?</h2>
     <p>
       Networking is key to career growth, but reaching out can feel daunting. This page is to help you debunking the mystery of networking through creating a strategic networking plan and learning outreach methods.
     </p>
   </section>
-  
   <section>
-    <img src="images/networking.jpg" alt="Three people network and share conversations at a career fair event.">
     <h2>Building a Strategic Networking Plan</h2>
-    <p>Creating a <a href="https://docs.google.com/document/d/18HMt79BU8ovGf9z7_P7No5tuwUS6qHNW5u0sgrepLtE/edit?tab=t.0" target="_blank">LAMP</a> list can help job seekers identify and prioritize a list of target organizations for strategic networking before actively applying for jobs or internships.</p>
+    <p class="plan">Creating a <a href="https://docs.google.com/document/d/18HMt79BU8ovGf9z7_P7No5tuwUS6qHNW5u0sgrepLtE/edit?tab=t.0" target="_blank">LAMP</a> list can help job seekers identify and prioritize a list of target organizations for strategic networking before actively applying for jobs or internships.</p>
     <ol>
       <li><strong>Creating a Spreadsheet:</strong> Use Excel or Google Spreadsheets to create a <a href="https://docs.google.com/spreadsheets/d/1axI0TA4-3FYtlyjkGu4rm_XbL8EOO2KQvd2t_bbdtAQ/edit?pli=1&gid=535776787#gid=535776787" target="_blank">spreadsheet provided by UMSI.</a></li>
       <li><strong>Creating 5 Columns:</strong> One to number the list (1-40), one to write the name of the organizations, one for alumni, one for motivation, and one for postings.</li>
@@ -48,7 +49,6 @@
     <p>
       Learning how to properly outreach to potential employers in different scenarios is also an important skill, below are some resources that could help improving your outreach ability.
     </p>
-    <img src="images/connections.jpg" alt="A man hands his resume to an employer.">
     <ul>
       <li>
         <a href="https://docs.google.com/document/d/1cwq2KtdKQbO-tICHKUyKRA3QY4_3VJ8NLC2kwPBY4dI/edit?tab=t.0#heading=h.sr3fmmczaskm" target="_blank">
@@ -76,10 +76,20 @@
       </li>
     </ul>
   </section>
-    </main>
-    <footer>
-        <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
-        </footer>
-    
+  </main>
+  <footer>
+    <form>
+    <fieldset>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required>
+      <input type="submit" value="Subscribe">
+    </fieldset>
+  </form>
+    <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p><br/>
+    <p>© Copyrights <span id="year"></span> by Yuyang Ding. All rights reserved.</p>
+  </footer>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
 </body>
 </html>
